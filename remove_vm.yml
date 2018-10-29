@@ -1,0 +1,15 @@
+---
+- name: OpenStack
+  hosts: localhost
+  vars:
+    openstack_authentication:
+      project_name: admin
+      user_domain_name: Default
+      project_domain_name: Default
+
+  tasks:
+    - name: Deletando uma imagem...
+      os_server:
+        auth: "{{ openstack_authentication }}"
+        name: teste-azzi-vm
+        state: absent
