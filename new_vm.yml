@@ -7,10 +7,17 @@
       user_domain_name: Default
       project_domain_name: Default
 
-  tasks:
     - name: Criando uma instância...
       os_server:
         state: present
         auth: "{{ openstack_authentication }}"
-        name: ansible-sabe-criar-vm
+        name: razzi-test-vm
         image: 54db790a-760c-4862-8ceb-d809191a7418
+        key_name: ansible
+        timeout: 200
+        flavor: 1
+        nics:
+          - net-id: 7afed87a-b512-4ef1-b7e9-eb1ccb56cf1e
+        meta:
+          hostname: razzi-test-vm
+          group: uge_master
