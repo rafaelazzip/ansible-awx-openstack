@@ -8,3 +8,4 @@
       os_server:
         name: teste-azzi-vm
         state: absent
+        auto_floating_ip: no
