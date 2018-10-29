@@ -1,11 +1,14 @@
 ---
 - name: OpenStack
-  hosts: all
-
+  hosts: 10.130.214.31
+      user_domain_name: Default
+      project_domain_name: Default
+      
   tasks:
     - name: Criando uma instância...
       os_server:
         state: present
+        auth: "{{ openstack_authentication }}"
         name: razzi-test-vm
         image: 54db790a-760c-4862-8ceb-d809191a7418
         key_name: ansible
