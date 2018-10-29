@@ -1,7 +1,7 @@
 ---
 - name: OpenStack
   hosts: localhost
-  gathes_facts: false
+  gather_facts: False
 
   tasks:
     - name: Criando uma instância...
