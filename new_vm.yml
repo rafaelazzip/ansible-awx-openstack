@@ -1,8 +1,8 @@
 ---
 - name: OpenStack
   hosts: 10.130.214.31
-      user_domain_name: Default
-      project_domain_name: Default
+    user_domain_name: Default
+    project_domain_name: Default
       
   tasks:
     - name: Criando uma instância...
