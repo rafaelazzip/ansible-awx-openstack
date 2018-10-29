@@ -1,10 +1,7 @@
 ---
 - name: OpenStack
   hosts: localhost
-  vars:
-    openstack_authentication:
-      user_domain_name: Default
-      project_domain_name: Default
+  gathes_facts: false
 
   tasks:
     - name: Criando uma instância...
@@ -16,8 +13,6 @@
         key_name: ansible
         timeout: 200
         flavor: 1
+        auto_floating_ip: no
         nics:
           - net-id: 7afed87a-b512-4ef1-b7e9-eb1ccb56cf1e
-        meta:
-          hostname: razzi-test-vm
-          group: uge_master
