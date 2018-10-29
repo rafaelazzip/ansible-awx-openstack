@@ -1,19 +1,16 @@
 ---
 - name: OpenStack
   hosts: localhost
+  vars:
+    openstack_authentication:
+      project_name: admin
+      user_domain_name: Default
+      project_domain_name: Default
 
   tasks:
-
     - name: Criando uma instância...
       os_server:
         state: present
-        name: teste-razzi-vm
+        auth: "{{ openstack_authentication }}"
+        name: ansible-sabe-criar-vm
         image: 54db790a-760c-4862-8ceb-d809191a7418
-        key_name: ansible
-        timeout: 200
-        flavor: 1
-        nics:
-          - net-id: 7afed87a-b512-4ef1-b7e9-eb1ccb56cf1e
-        meta:
-          hostname: teste-razzi-vm
-          group: uge_master
