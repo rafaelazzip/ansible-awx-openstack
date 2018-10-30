@@ -6,5 +6,5 @@
   tasks:
     - name: Deletando uma imagem...
       os_server:
-        name: teste-azzi-vm
+        name: razzi-test-vm
         state: absent
