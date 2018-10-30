@@ -7,7 +7,7 @@
     - name: Criando uma instância...
       os_server:
         state: present
-        name: razzi-test-vm
+        name: nova-vm
         image: 54db790a-760c-4862-8ceb-d809191a7418
         key_name: ansible
         timeout: 200

@@ -6,5 +6,5 @@
   tasks:
     - name: Deletando uma imagem...
       os_server:
-        name: razzi-test-vm
+        name: nova-vm
         state: absent
