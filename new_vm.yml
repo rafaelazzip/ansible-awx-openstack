@@ -15,3 +15,4 @@
         auto_floating_ip: no
         nics:
           - net-id: 7afed87a-b512-4ef1-b7e9-eb1ccb56cf1e
+#fim
